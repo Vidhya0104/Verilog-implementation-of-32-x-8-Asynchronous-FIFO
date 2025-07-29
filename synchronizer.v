@@ -1,0 +1,20 @@
+module synchronizer(clk, rst, din, dout);
+    parameter WIDTH =5;
+	 input clk, rst;
+	 input [WIDTH:0]din;
+	 output reg [WIDTH:0]dout;
+	 reg [WIDTH:0]q1;
+	 always@(posedge clk)
+	 begin
+	   if(!rst) begin
+			q1<=0;
+			dout<=0;
+		end
+	   else begin
+			q1<=din;
+			dout<=q1;
+		end
+	end
+endmodule
+
+		

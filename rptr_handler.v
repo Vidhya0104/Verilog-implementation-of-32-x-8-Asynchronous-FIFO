@@ -1,0 +1,35 @@
+module rptr_handler(raddr,rptr,empty,rclk,ren,rrst,wptr_sync);
+	parameter WIDTH=5;
+	input rclk,ren,rrst;
+	input [WIDTH:0] wptr_sync;
+	output reg [WIDTH:0] rptr,raddr;
+	output reg empty;
+	
+	wire [WIDTH:0] rptr_nxt;
+	wire [WIDTH:0] raddr_nxt;
+	wire rempty;
+	
+	assign raddr_nxt=raddr+(ren & !empty);
+	assign rptr_nxt=(raddr_nxt>>1)^raddr_nxt;
+	assign rempty = (rptr_nxt == wptr_sync);
+	
+	always@(posedge rclk or negedge rrst) begin
+		if(!rrst) begin
+			raddr <= 0;
+			rptr <= 0;
+		end
+		else begin
+			raddr <= raddr_nxt;
+			rptr <= rptr_nxt;
+		end
+	end
+	always@(posedge rclk or negedge rrst) begin
+		if(!rrst) begin
+			empty <= 1;
+		end
+		else begin
+			empty <= rempty;
+		end
+	end	
+endmodule		
+	
