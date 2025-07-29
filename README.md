@@ -1,24 +1,27 @@
 # Verilog Implementation of 32x8 Asynchronous FIFO
 
-This repository contains the Verilog implementation of a 32x8 Asynchronous FIFO (First-In First-Out) memory, designed to handle safe data transfer between two independent clock domains. The project demonstrates how key concepts in digital design and synchronization can be put into practice using Verilog HDL and simulated using ModelSim.
+This project implements a 32x8 Asynchronous FIFO (First-In First-Out) memory using Verilog. Designed from scratch, this FIFO enables safe data transfer between two independent clock domains, integrating synchronization and metastability handling. Verified through ModelSim simulation, the project focuses on core digital design concepts that are foundational in hardware communication systems.
 
 ---
 
-## 📚 Table of Contents
+## 📑 Table of Contents
 
-1. [Project Description](#project-description)  
+1. [Description](#description)  
 2. [Key Concepts Learnt](#key-concepts-learnt)  
 3. [Tools Used](#tools-used)  
-4. [How to Run](#how-to-run)  
-5. [Simulation Output Screenshots](#simulation-output-screenshots)  
-6. [Folder Structure](#folder-structure)  
-7. [Contact](#contact)
+4. [Screenshots of Output](#screenshots-of-output)  
+5. [Contact](#contact)
 
 ---
 
-## 🧾 Project Description
+## 📘 Description
 
-An **Asynchronous FIFO** is a memory buffer used to safely pass data between two systems that operate on different clocks. This design supports independent read and write operations with asynchronous clocks and incorporates Gray code pointer management, synchronization logic, and control signals to detect FIFO full/empty conditions. The design is verified using testbenches and waveform analysis in ModelSim.
+An **Asynchronous FIFO** is a specialized memory buffer used to safely transfer data between subsystems that operate at different clock frequencies. Unlike synchronous FIFOs, asynchronous FIFOs manage clock domain crossing using Gray codes and synchronization logic, making them suitable for complex SoC and FPGA-based applications.
+
+This 32-depth and 8-bit wide FIFO allows writing and reading on separate clocks (`wclk` and `rclk`) with full and empty detection logic. The project was built from the ground up to understand:
+- How FIFO pointers are managed in different domains.
+- How to ensure data stability during domain crossing.
+- How to structure FIFO memory and control logic in Verilog.
 
 ---
 
@@ -26,29 +29,48 @@ An **Asynchronous FIFO** is a memory buffer used to safely pass data between two
 
 > "I’m excited to share my new project on Verilog implementation of a 32x8 asynchronous FIFO. It may sound like a basic project, but this was my journey of decoding logic from scratch, learning, failing, and debugging my way through."
 
-In the process of building this FIFO from scratch, I gained hands-on experience in:
-- Write and read pointer generation and management.
-- Gray code conversion for safe clock domain crossing.
-- Full/empty detection logic for FIFO buffers.
-- Synchronization and metastability handling.
-- Simulation and debugging in ModelSim.
+By building the project independently, I strengthened my understanding of:
+- ✅ Read/Write Pointer Management  
+- ✅ Gray Code Conversion for Clock Domain Crossing  
+- ✅ Full and Empty Detection Logic  
+- ✅ Synchronization and Metastability Handling  
+- ✅ Designing and Testing Asynchronous Logic in Verilog  
+- ✅ Simulation and Waveform Debugging in ModelSim  
 
 ---
 
-## 🛠️ Tools Used
+## 🔧 Tools Used
 
-| Tool        | Purpose                            |
-|-------------|------------------------------------|
-| Verilog HDL | RTL Design                         |
-| ModelSim    | Simulation and Waveform Analysis   |
-| Git         | Version Control                    |
-| Markdown    | Documentation                      |
+| Tool        | Description                              |
+|-------------|------------------------------------------|
+| **Verilog** | For RTL Design                           |
+| **ModelSim**| For Simulation and Waveform Debugging    |
+| **Git**     | Version Control                          |
+| **Markdown**| Project Documentation                    |
 
 ---
 
-## ▶️ How to Run
+## 📸 Screenshots of Output
 
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/async-fifo-verilog.git
-cd async-fifo-verilog
+### ✅ FIFO Write Operation  
+![FIFO Write](docs/fifo_write_waveform.png)
+
+### ✅ FIFO Read Operation  
+![FIFO Read](docs/fifo_read_waveform.png)
+
+### ✅ Full and Empty Detection  
+![Flags](docs/fifo_flags_waveform.png)
+
+---
+
+## 📬 Contact
+
+Feel free to reach out for feedback, collaboration, or discussion:
+
+**Vasantha Vidhya**  
+📧 vasanthavidhya@email.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+
+---
+
+> *This project was a stepping stone to mastering asynchronous digital design. I'm eager to continue building more robust digital systems using Verilog HDL framework.*
