@@ -52,14 +52,26 @@ By building the project independently, I strengthened my understanding of:
 
 ## 📸 Screenshots of Output
 
-### ✅ FIFO Write Operation  
-![FIFO Write](docs/fifo_write_waveform.png)
+### ✅ FIFO topmodule  
+![FIFO Write](docs/FIFO.jpeg)
 
-### ✅ FIFO Read Operation  
-![FIFO Read](docs/fifo_read_waveform.png)
+### ✅ FIFO Write Pointer Handler
+![FIFO Write](docs/wptr_handler.jpeg)
 
-### ✅ Full and Empty Detection  
-![Flags](docs/fifo_flags_waveform.png)
+### ✅ FIFO Read Pointer Handler
+![FIFO Read](docs/rptr_handler.jpeg)
+
+### ✅ FIFO Memory  
+![Flags](docs/fifo_mem.jpeg)
+
+### ✅ Synchroniser  
+![Flags](docs/synchroniser.jpeg)
+
+### ✅ Transcript output  
+![Flags](docs/transcript.jpeg)
+
+### ✅ Output Waveform  
+![Flags](docs/waveform.jpeg)
 
 ---
 
