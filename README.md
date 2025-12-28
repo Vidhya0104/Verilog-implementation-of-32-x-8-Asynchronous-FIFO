@@ -81,7 +81,7 @@ Feel free to reach out for feedback, collaboration, or discussion:
 
 **Vasantha Vidhya**  
 📧 vasanthavidhyapv@email.com  
-🔗 [LinkedIn]https://www.linkedin.com/in/vasantha-vidhya-3b53aa25a/)
+🔗 [LinkedIn]https://www.linkedin.com/in/vasantha-vidhya-3b53aa25a/
 
 ---
 
