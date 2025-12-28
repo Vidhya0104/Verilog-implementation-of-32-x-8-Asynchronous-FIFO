@@ -80,8 +80,8 @@ By building the project independently, I strengthened my understanding of:
 Feel free to reach out for feedback, collaboration, or discussion:
 
 **Vasantha Vidhya**  
-📧 vasanthavidhya@email.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+📧 vasanthavidhyapv@email.com  
+🔗 [LinkedIn]https://www.linkedin.com/in/vasantha-vidhya-3b53aa25a/)
 
 ---
 
